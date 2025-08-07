@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>S&T Gen AI Survey</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <div class="container">
+        <form id="survey-form">
+            <!-- Step 1 -->
+            <div class="step active" id="step-1">
+                <h2>Tell us about you</h2>
+                <label for="familiarity">How would you describe your AI familiarity?</label>
+                <select id="familiarity" name="familiarity" required>
+                    <option value="">Select...</option>
+                    <option value="Skilled Practitioner">Skilled Practitioner - I actively use Gen AI for more advanced or customized tasks</option>
+                    <option value="Regular User">Regular User - I use Gen AI tools regularly for work or personal use and feel fairly comfortable with them</option>
+                    <option value="Casual Explorer">Casual Explorer - I've tried Gen AI tools a few times but only for simple or personal tasks</option>
+                    <option value="Unfamiliar">Unfamiliar - I'm just getting started and haven't used Gen AI tools much</option>
+                </select>
+
+                <label for="task">What type of task are you trying to complete?</label>
+                <select id="task" name="task" required></select>
+            </div>
+
+            <!-- Step 2: Prompt results -->
+            <div class="step" id="step-2">
+                <h2>Your recommended prompts</h2>
+                <p>The following prompts are tailored to your needs based on your responses to the survey. Please note they are AI-generated – we encourage you to experiment with them and share recommended prompts by retaking the survey.</p>
+                <div id="results-container"></div>
+                <div class="download">
+                    <button type="button" id="downloadBtn">Download Prompts</button>
+                </div>
+            </div>
+
+            <!-- Step 3: Share your favorite prompts -->
+            <div class="step" id="step-3">
+                <h2>Share your favorite prompts</h2>
+                <label for="favoritePrompts">Which of these prompts did you find most helpful?</label>
+                <textarea id="favoritePrompts" name="favoritePrompts" rows="4" required></textarea>
+                <p>Please also indicate which of your selected tasks this prompt helps with, if applicable.</p>
+                <p>Please hit send on the automated email window at the end of the survey to share your responses with the S&T Gen AI Team.</p>
+            </div>
+
+            <!-- Navigation -->
+            <div class="navigation">
+                <button type="button" id="prevBtn" class="nav-button">Back</button>
+                <button type="button" id="nextBtn" class="nav-button primary">Next</button>
+            </div>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
